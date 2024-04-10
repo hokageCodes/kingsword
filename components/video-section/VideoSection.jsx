@@ -67,9 +67,9 @@ const VideoSection = () => {
               animate="visible"
               transition={{ duration: 0.5 }}
             >
-              <Image
+              <img
                 className="w-20 h-20 flex-none bg-cover rounded-lg mr-4"
-                src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
+                src={`https://img.youtube.com/vi/${video.id}/oth.jpg`}
                 alt={video.title}
               />
               <div className="flex-grow">

@@ -28,7 +28,7 @@ const WorshipPage = () => {
         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
           <div className="col-span-1">
             <div className="relative" style={{ height: '243.534px' }}>
-              <Image
+              <img
                 src="/other.jpg"
                 alt="Gallery Image 1"
                 layout="fill"
@@ -39,7 +39,7 @@ const WorshipPage = () => {
           </div>
           <div className="col-span-1">
             <div className="relative" style={{ height: '243.534px' }}>
-              <Image
+              <img  
                 src="/other1.jpg"
                 alt="Gallery Image 2"
                 layout="fill"
@@ -50,7 +50,7 @@ const WorshipPage = () => {
           </div>
           <div className="col-span-1">
             <div className="relative" style={{ height: '243.534px' }}>
-              <Image
+              <img
                 src="/other2.jpg"
                 alt="Gallery Image 3"
                 layout="fill"
@@ -61,7 +61,7 @@ const WorshipPage = () => {
           </div>
           <div className="col-span-1">
             <div className="relative" style={{ height: '243.534px' }}>
-              <Image
+              <img
                 src="/other.jpg"
                 alt="Gallery Image 4"
                 layout="fill"
@@ -71,7 +71,7 @@ const WorshipPage = () => {
             </div>
           </div>
         </div>
-
+    
         {/* Form Section */}
         <div className="md:w-1/2 mt-8 md:mt-0">
           <div className="bg-white p-8 rounded-lg shadow-md">

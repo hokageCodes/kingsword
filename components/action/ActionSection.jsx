@@ -35,7 +35,7 @@ const ActionSection = () => {
           {actions.map((action, index) => (
             <div key={index} className="flex-1">
               <div className="relative">
-                <Image
+                <img
                   className="w-full h-full object-cover rounded-lg"
                   src={action.imageUrl}
                   alt={action.alt}

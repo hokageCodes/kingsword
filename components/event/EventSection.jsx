@@ -3,10 +3,10 @@ import React from 'react';
 
 const EventsSection = () => {
   const events = [
-    { title: 'INA', subtitle: 'Worship Meetings', imageUrl: '/oth.jpg' },
-    { title: 'Butterflies', subtitle: 'Love Series', imageUrl: '/otha.jpg' },
-    { title: 'The Legislation', subtitle: 'Next Conference 2023', imageUrl: '/othest.jpg' },
-    { title: 'Saba', subtitle: 'Feast', imageUrl: '/oth.jpg' },
+    { title: 'INA', subtitle: 'Worship Meetings', imageUrl: '/event4.jpg' },
+    { title: 'Butterflies', subtitle: 'Love Series', imageUrl: '/event1.jpg' },
+    { title: 'The Legislation', subtitle: 'Next Conference 2023', imageUrl: '/event2.jpg' },
+    { title: 'Saba', subtitle: 'Feast', imageUrl: '/event3.jpg' },
   ];
 
   return (
@@ -23,7 +23,7 @@ const EventsSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {events.map((event, index) => (
             <div key={index} className="rounded overflow-hidden shadow-lg bg-white">
-              <Image
+              <img
                 className="w-full object-cover h-[300px]"
                 src={event.imageUrl}
                 alt={`Event ${event.title}`}
