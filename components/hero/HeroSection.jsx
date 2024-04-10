@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -54,7 +55,7 @@ const HeroSection = () => {
             exit={{ opacity: 0 }}
             transition={{ opacity: { duration: 0.5 } }}
           >
-            <img
+            <Image
               src={slide.image}
               className="absolute block w-full h-full top-0 left-1/2 transform -translate-x-1/2"
               alt="Hero slide"

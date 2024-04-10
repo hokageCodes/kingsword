@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const ActionSection = () => {
@@ -34,7 +35,7 @@ const ActionSection = () => {
           {actions.map((action, index) => (
             <div key={index} className="flex-1">
               <div className="relative">
-                <img
+                <Image
                   className="w-full h-full object-cover rounded-lg"
                   src={action.imageUrl}
                   alt={action.alt}

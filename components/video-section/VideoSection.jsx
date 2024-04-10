@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPlayCircle } from 'react-icons/fa';
+import Image from 'next/image';
 
 const VideoSection = () => {
   const videoData = [
@@ -66,7 +67,7 @@ const VideoSection = () => {
               animate="visible"
               transition={{ duration: 0.5 }}
             >
-              <img
+              <Image
                 className="w-20 h-20 flex-none bg-cover rounded-lg mr-4"
                 src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
                 alt={video.title}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const EventsSection = () => {
@@ -22,7 +23,7 @@ const EventsSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {events.map((event, index) => (
             <div key={index} className="rounded overflow-hidden shadow-lg bg-white">
-              <img
+              <Image
                 className="w-full object-cover h-[300px]"
                 src={event.imageUrl}
                 alt={`Event ${event.title}`}
