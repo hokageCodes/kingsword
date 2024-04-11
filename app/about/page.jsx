@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 // Import your content components
-import OurBeliefContent from '@/components/our-belief/OurBelief';
-import OurLeadershipContent from '@/components/our-leadership/OurLeadershipContent';
-import InstallationsContent from '@/components/installations/InstallationsContent';
+import OurBeliefContent from '../../components/our-belief/OurBelief';
+import OurLeadershipContent from '../../components/our-leadership/OurLeadershipContent';
+import InstallationsContent from '../../components/installations/InstallationsContent';
 
 const tabData = [
   {

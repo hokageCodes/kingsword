@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Team9 = () => {
+const OurLeadershipContent = () => {
   const [member, setMember] = useState(0);
 
   // Data for the teams (assuming unchanged)
@@ -132,5 +132,5 @@ const Team9 = () => {
   );
 };
 
-export default Team9;
+export default OurLeadershipContent;
 
