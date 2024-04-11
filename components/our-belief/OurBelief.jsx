@@ -35,8 +35,8 @@ const OurBeliefContent = () => {
         </motion.div>
         <motion.div variants={variants} className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
           <p className='mb-8'>KingsWord Calgary is a Church of young,  vibrant and passionate people based in Calgary in Alberta.</p>
-          <p className="mt-8">We are a Church committed to raising people who give expression to the Word and the Spirit of God in their daily lives; and who are committed to God's plan for their lives.</p>
-          <p className="mt-8">KingsWord Calgary is an expression of KingsWord Everywhere®.  At KingsWord Everywhere®, our vision is to raise a supernatural people - people of the Word, Spirit and Purpose everywhere.</p>
+          <p className="mt-8">We are a Church committed to raising people who give expression to the Word and the Spirit of God in their daily lives; and who are committed to God&#39;s plan for their lives.</p>
+          <p className="mt-8">KingsWord Calgary is an expression of KingsWord Everywhere.  At KingsWord Everywhere, our vision is to raise a supernatural people - people of the Word, Spirit and Purpose everywhere.</p>
         </motion.div>
       </motion.div>
 
