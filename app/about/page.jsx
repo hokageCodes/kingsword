@@ -1,22 +1,35 @@
+"use client"
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+// Import your content components
+import OurBeliefContent from '@/components/our-belief/OurBelief';
+import OurLeadershipContent from '@/components/our-leadership/OurLeadershipContent';
+import InstallationsContent from '@/components/installations/InstallationsContent';
 
 const tabData = [
   {
     label: 'Our Belief',
-    content: 'Content about our beliefs...',
+    content: <OurBeliefContent />,
   },
   {
     label: 'Our Leadership',
-    content: 'Content about our leadership...',
+    content: <OurLeadershipContent />,
   },
   {
     label: 'Installations',
-    content: 'Content about our installations...',
+    content: <InstallationsContent />,
   },
 ];
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState(tabData[0].label);
+
+  // Animation variants
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -35,9 +48,15 @@ export default function AboutPage() {
           </button>
         ))}
       </div>
-      <div className="p-4">
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.5 }}
+        className="p-4"
+      >
         {tabData.find((tab) => tab.label === activeTab)?.content}
-      </div>
+      </motion.div>
     </div>
   );
 }
