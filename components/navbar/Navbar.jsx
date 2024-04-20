@@ -53,8 +53,8 @@ const NavBar = () => {
             </div>
           )}
         </li>
-        <li className='p-4 font-medium hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/grow">Give</a></li>
-        <li className='p-4 font-medium hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="https://youtube.com/kingswordcalgary8172?si=AqiMNKeBUnIy-DtJ">Listen</a></li>
+        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/grow">Give</a></li>
+        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="https://youtube.com/kingswordcalgary8172?si=AqiMNKeBUnIy-DtJ">Listen</a></li>
       </ul>
       <div onClick={handleNav} className='md:hidden z-30 text-3xl'>
         { !nav ? <AiOutlineMenu /> : <AiOutlineClose /> }
