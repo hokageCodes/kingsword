@@ -11,8 +11,8 @@ const EventsSection = () => {
     { title: 'Supernatural Canada', subtitle: 'Annual Worship Meeting', imageUrl: '/Supernatural.png' },
     { title: 'Limitless', subtitle: 'Worship Meeting', imageUrl: '/Limitless.png' },
     { title: 'Easter Sunday', subtitle: 'Easter Service', imageUrl: '/Easter-Sunday-Service.png' },
-    { title: 'Mr. & Mrs', subtitle: 'Love Series', imageUrl: '/mr-mrs.jpg' },
-    { title: 'His & Hers', subtitle: 'Love Series', imageUrl: '/his-hers.jpg' },
+    { title: 'Mr. & Mrs', subtitle: 'Love Series', imageUrl: '/mr-mrs.png' },
+    { title: 'His & Hers', subtitle: 'Love Series', imageUrl: '/his-hers.png' },
     { title: 'Carol Service', subtitle: 'Christmas Carol Service', imageUrl: '/Carol-Service.png' },
     { title: 'Cross Over Service', subtitle: 'New Years Eve', imageUrl: '/Cross-Over-service.png' },
   ];
