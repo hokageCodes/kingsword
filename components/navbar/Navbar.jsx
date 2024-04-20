@@ -46,10 +46,9 @@ const NavBar = () => {
           {showLocationsDropdown && (
             <div className='absolute left-0 mt-[260px] w-48 bg-white text-black rounded shadow-lg'>
               <ul>
-                <li className='p-2 hover:bg-gray-200'><a href="/location1">Location 1</a></li>
-                <li className='p-2 hover:bg-gray-200'><a href="/location2">Location 2</a></li>
-                <li className='p-2 hover:bg-gray-200'><a href="/location3">Location 3</a></li>
-                <li className='p-2 hover:bg-gray-200'><a href="/location4">Location 4</a></li>
+                <li className='p-2 hover:bg-gray-200'><a href="/location1">Calgary</a></li>
+                <li className='p-2 hover:bg-gray-200'><a href="/location2">Toronto</a></li>
+                <li className='p-2 hover:bg-gray-200'><a href="/location3">Vancuover</a></li>
               </ul>
             </div>
           )}
