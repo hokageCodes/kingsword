@@ -44,7 +44,7 @@ const NavBar = () => {
         <li className='p-4 font-medium hover:text-[#c27803] text-lg transition duration-500 ease-out hover:ease-in cursor-pointer relative flex items-center' onClick={toggleLocationsDropdown}>
           Locations <AiOutlineDown className="ml-1" />
           {showLocationsDropdown && (
-            <div className='absolute left-0 mt-[260px] w-48 bg-white text-black rounded shadow-lg'>
+            <div className='absolute left-0 mt-[230px] w-48 bg-white text-black rounded shadow-lg'>
               <ul>
                 <li className='p-2 hover:bg-gray-200'><a href="/location1">Calgary</a></li>
                 <li className='p-2 hover:bg-gray-200'><a href="/location2">Toronto</a></li>

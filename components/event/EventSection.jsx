@@ -1,12 +1,20 @@
-import Image from 'next/image';
+"use client"
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import Image from 'next/image';
 
 const EventsSection = () => {
   const events = [
-    { title: 'INA', subtitle: 'Worship Meetings', imageUrl: '/event4.jpg' },
-    { title: 'Butterflies', subtitle: 'Love Series', imageUrl: '/event1.jpg' },
-    { title: 'The Legislation', subtitle: 'Next Conference 2023', imageUrl: '/event2.jpg' },
-    { title: 'Saba', subtitle: 'Feast', imageUrl: '/event3.jpg' },
+    { title: 'Supernatural Canada', subtitle: 'Annual Worship Meeting', imageUrl: '/Supernatural.png' },
+    { title: 'Limitless', subtitle: 'Worship Meeting', imageUrl: '/Limitless.png' },
+    { title: 'Easter Sunday', subtitle: 'Easter Service', imageUrl: '/Easter-Sunday-Service.png' },
+    { title: 'Mr. & Mrs', subtitle: 'Love Series', imageUrl: '/mr-mrs.jpg' },
+    { title: 'His & Hers', subtitle: 'Love Series', imageUrl: '/his-hers.jpg' },
+    { title: 'Carol Service', subtitle: 'Christmas Carol Service', imageUrl: '/Carol-Service.png' },
+    { title: 'Cross Over Service', subtitle: 'New Years Eve', imageUrl: '/Cross-Over-service.png' },
   ];
 
   return (
@@ -20,21 +28,47 @@ const EventsSection = () => {
             View all events
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
           {events.map((event, index) => (
-            <div key={index} className="rounded overflow-hidden shadow-lg bg-white">
-              <img
-                className="w-full object-cover h-[300px]"
-                src={event.imageUrl}
-                alt={`Event ${event.title}`}
-              />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{event.title}</div>
-                <p className="text-gray-700 text-base">{event.subtitle}</p>
+            <SwiperSlide key={index}>
+              <div className="rounded overflow-hidden shadow-lg bg-white">
+                <Image
+                  src={event.imageUrl}
+                  alt={`Event ${event.title}`}
+                  layout="responsive"
+                  width={500}
+                  height={380}
+                  objectFit="cover"
+                />
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">{event.title}</div>
+                  <p className="text-gray-700 text-base">{event.subtitle}</p>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );
