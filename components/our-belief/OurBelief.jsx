@@ -1,66 +1,45 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
 
-// Define your animation variants here
-const variants = {
-  offscreen: {
-    x: -100,
-    opacity: 0
-  },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8
-    }
-  }
-};
+function OutBeliefContent() {
+  // Images array with specified paths
+  const images = [
+    '/about1.png',
+    '/about2.png',
+    '/about3.png',
+    '/about4.png',
+    '/about5.png',
+    '/about6.png',
+  ];
 
-const OurBeliefContent = () => {
+  const title = 'Raising A Supernatural Army';
+  const description = [
+    'KingsWord International Church, Chicago is committed to raising a people of purpose.',
+    'To proclaim Jesus, the Anointed one and present him clearly to the world. We are called to help people build strong relationships with the Lord through the preaching and teaching of the Word.',
+    'We emphasize victory is by the Word and the strategy that is in it.',
+    'We are ordained to raise up and expose God’s children into the fullness of their God-given purpose.'
+  ];
+
   return (
-    <div className="space-y-16">
-      {/* Top Section */}
-      <motion.div 
-        className="flex flex-col md:flex-row items-center"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-      >
-        <motion.div variants={variants} className="w-full md:w-1/2">
-          {/* Replace with your image */}
-          <Image src="/fam.jpg" alt="Vision Image" layout="responsive" width={500} height={300} />
-        </motion.div>
-        <motion.div variants={variants} className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
-          <p className='mb-8'>KingsWord Calgary is a Church of young,  vibrant and passionate people based in Calgary in Alberta.</p>
-          <p className="mt-8">We are a Church committed to raising people who give expression to the Word and the Spirit of God in their daily lives; and who are committed to God&#39;s plan for their lives.</p>
-          <p className="mt-8">KingsWord Calgary is an expression of KingsWord Everywhere.  At KingsWord Everywhere, our vision is to raise a supernatural people - people of the Word, Spirit and Purpose everywhere.</p>
-        </motion.div>
-      </motion.div>
-
-      {/* Bottom Section */}
-      <motion.div 
-        className="flex flex-col md:flex-row items-center"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-      >
-        <motion.div variants={variants} className="w-full md:w-1/2">
-          {/* Replace with your image */}
-          <Image src="/hug.jpg" alt="Mission Image" layout="responsive" width={500} height={300} />
-        </motion.div>
-        <motion.div variants={variants} className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
-          <h2 className="text-2xl font-bold mb-4">Our vision is to raise a supernatural army that will bring God&#39;s influence to cover the earth</h2>
-          <p>Joel 2:1-32, Is 8:18, Eze 8:14</p>
-          <hr className='mt-8 mb-8' />
-          <h2 className="text-2xl font-bold mb-4">Our vision is to raise a supernatural army that will bring God&#39;s influence to cover the earth</h2>
-          <p>Joel 2:1-32, Is 8:18, Eze 8:14</p>
-        </motion.div>
-      </motion.div>
-    </div>
+    <section className="container mx-auto flex flex-wrap items-center justify-center py-12 px-4 lg:px-0">
+      <div className="lg:w-1/2 lg:max-w-lg text-center lg:text-left mb-8 lg:mb-0">
+        <h2 className="text-4xl font-bold mb-4">{title}</h2>
+        <hr className="border-t-4 border-blue-600 w-3/4 mx-auto lg:mx-0 mb-8" />
+        {description.map((text, index) => (
+          <p key={index} className="mb-4">{text}</p>
+        ))}
+        <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+          CONTACT US
+        </button>
+      </div>
+      <div className="lg:w-1/2 lg:max-w-lg grid grid-cols-3 gap-4 px-4">
+        {images.map((src, index) => (
+          <div key={index} className="aspect-w-1 aspect-h-1">
+            <img className="object-cover rounded-lg shadow-lg" src={src} alt={`Gallery ${index}`} />
+          </div>
+        ))}
+      </div>
+    </section>
   );
-};
+}
 
-export default OurBeliefContent;
+export default OutBeliefContent;
