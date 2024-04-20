@@ -5,21 +5,18 @@ const ActionSection = () => {
   const actions = [
     {
       label: 'VOLUNTEER',
-      imageUrl: '/other.jpg', // Replace with your image path
-      alt: 'Volunteer',
-      description: 'Join our team and make a difference' // Add a description or more info if needed
+      imageUrl: '/connect1.png', // Ensure correct image path
+      alt: 'Volunteer'
     },
     {
       label: 'GIVE',
-      imageUrl: '/other1.jpg', // Replace with your image path
-      alt: 'Give',
-      description: 'Support us with your contributions' // Add a description or more info if needed
+      imageUrl: '/connect2.png', // Ensure correct image path
+      alt: 'Give'
     },
     {
       label: 'CONNECT',
-      imageUrl: '/other2.jpg', // Replace with your image path
-      alt: 'Connect',
-      description: 'Get involved with our community' // Add a description or more info if needed
+      imageUrl: '/other1.jpg', // Ensure correct image path
+      alt: 'Connect'
     }
   ];
 
@@ -31,20 +28,19 @@ const ActionSection = () => {
             Want to be a part of this movement?
           </h2>
         </div>
-        <div className="flex flex-row justify-center items-stretch gap-4">
+        <div className="flex flex-wrap justify-center items-stretch gap-4">
           {actions.map((action, index) => (
-            <div key={index} className="flex-1">
-              <div className="relative">
-                <img
-                  className="w-full h-full object-cover rounded-lg"
-                  src={action.imageUrl}
-                  alt={action.alt}
-                  style={{ height: '300px' }} // You can set a fixed height or adjust as needed
-                />
-                <div className="absolute bottom-0 w-full p-4 bg-black bg-opacity-50">
-                  <h3 className="text-white text-xl font-bold">{action.label}</h3>
-                  <p className="text-white">{action.description}</p> {/* Optional */}
-                </div>
+            <div key={index} className="relative flex-1 min-w-96" style={{ maxWidth: "400px", position: "relative", height: "300px" }}>
+              <Image
+                src={action.imageUrl}
+                alt={action.alt}
+                layout="fill" // This will make the image fill the container
+                objectFit="cover" // Ensures the image covers the div correctly
+                className="rounded-lg"
+                sizes="(max-width: 768px) 100vw, 33vw" // Sizes for responsive images
+              />
+              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 rounded-lg">
+                <h3 className="text-white text-2xl lg:text-3xl font-bold text-center">{action.label}</h3>
               </div>
             </div>
           ))}

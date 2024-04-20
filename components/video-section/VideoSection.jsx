@@ -41,7 +41,7 @@ const VideoSection = () => {
 
   return (
     <div className="container mx-auto my-8 p-4 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold mb-4">The New Story</h2>
+      {/* <h2 className="text-2xl font-bold mb-4">The New Story</h2> */}
       <div className="flex flex-col lg:flex-row">
         {/* Main Video Display */}
         <div className="flex-1">

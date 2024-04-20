@@ -13,12 +13,8 @@ const WorshipPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Process form data
     console.log(formData);
   };
-
-    // Helper function to load images correctly on mobile /(bug fix)
-    const getImagePath = (imageName) => `/path/to/images/${imageName}`;
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8">
@@ -26,50 +22,18 @@ const WorshipPage = () => {
 
         {/* Slanted Image Gallery */}
         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-          <div className="col-span-1">
-            <div className="relative" style={{ height: '243.534px' }}>
-              <img
-                src="/other.jpg"
-                alt="Gallery Image 1"
+          {['other.jpg', 'worship1.png', 'worship2.png', 'worship3.png'].map((src, index) => (
+            <div key={index} className="col-span-1 relative h-60 lg:h-96">
+              {/* Using Next.js Image component for optimized images */}
+              <Image
+                src={`/${src}`} // Ensure the path is correct
+                alt={`Gallery Image ${index + 1}`}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-lg transform translate-y-10% mt-[30px]"
+                className="rounded-lg"
               />
             </div>
-          </div>
-          <div className="col-span-1">
-            <div className="relative" style={{ height: '243.534px' }}>
-              <img  
-                src="/other1.jpg"
-                alt="Gallery Image 2"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg transform -translate-y-10%"
-              />
-            </div>
-          </div>
-          <div className="col-span-1">
-            <div className="relative" style={{ height: '243.534px' }}>
-              <img
-                src="/other2.jpg"
-                alt="Gallery Image 3"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg transform translate-y-10% mt-[50px]"
-              />
-            </div>
-          </div>
-          <div className="col-span-1">
-            <div className="relative" style={{ height: '243.534px' }}>
-              <img
-                src="/other.jpg"
-                alt="Gallery Image 4"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg transform -translate-y-10%"
-              />
-            </div>
-          </div>
+          ))}
         </div>
     
         {/* Form Section */}
@@ -106,11 +70,9 @@ const WorshipPage = () => {
                 />
               </div>
               <div>
-                <label htmlFor="installation" className="block text-gray-700 text-sm font-bold mb-2">
-                  Installation *
-                </label>
+                <label htmlFor="city" className="block text-gray-700 text-sm font-bold mb-2">City</label>
                 <select
-                  id="installation"
+                  id="city"
                   name="city"
                   onChange={handleInputChange}
                   className="w-full p-3 border rounded bg-white"
@@ -122,11 +84,9 @@ const WorshipPage = () => {
                   <option value="city_three">City Three</option>
                 </select>
               </div>
-              <div>
               <button type="submit" className="w-full bg-yellow-500 text-white p-3 rounded hover:bg-yellow-600">
-                  Worship with us
-                </button>
-              </div>
+                Worship with us
+              </button>
             </form>
           </div>
         </div>
@@ -136,3 +96,4 @@ const WorshipPage = () => {
 };
 
 export default WorshipPage;
+
