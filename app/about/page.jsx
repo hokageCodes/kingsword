@@ -32,9 +32,9 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="w-full">
       {/* Banner with larger text */}
-      <div className="h-24 flex justify-around items-center bg-yellow-300 py-4 shadow-md">
+      <div className="h-16 flex justify-around items-center bg-yellow-300 py-4 shadow-md">
         {tabData.map((tab, index) => (
           <div
             key={index}
