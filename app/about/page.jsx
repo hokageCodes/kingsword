@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div
             key={index}
             onClick={() => setActiveTab(tab.label)}
-            className={`text-2xl md:text-3xl ${
+            className={`text-xl md:text-2xl ${
               activeTab === tab.label
                 ? 'text-black-500 font-semibold'
                 : 'text-gray-600 hover:text-black-900'
