@@ -62,14 +62,15 @@ const HeroSection = () => {
           >
             <img
               src={slide.image}
-              className="absolute block w-full h-full top-0 left-1/2 transform -translate-x-1/2"
+              className="w-full h-full object-cover" // Changed to object-cover to maintain aspect ratio
               alt="Hero slide"
+              style={{ objectPosition: 'center' }} // Ensure the image is centered
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
               <motion.h2
                 dangerouslySetInnerHTML={{ __html: slide.title }}
-                className="text-5xl md:text-7xl font-bold leading-tight"
+                className="text-5xl text-white md:text-7xl font-bold leading-tight"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
@@ -77,7 +78,6 @@ const HeroSection = () => {
               <motion.a
                 href={slide.ctaLink}
                 className="mt-8 bg-[#c27803] hover:bg-blue-800 text-white font-bold py-3 px-6 transition duration-300 ease-in-out text-xl"
-                style={{ border: 'none' }} // Square button without rounded corners
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
@@ -89,7 +89,6 @@ const HeroSection = () => {
         ))}
       </AnimatePresence>
 
-      
       <button type="button" className="absolute top-0 left-0 z-30 h-full p-4" onClick={prevSlide}>
         {/* Previous button */}
       </button>
@@ -102,7 +101,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
-
-
