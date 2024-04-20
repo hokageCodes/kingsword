@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+body, button, input, textarea, select {
+    font-family: 'Syne', sans-serif;
+  }
+  
+  /* Define specific weights if needed */
+  .font-light {
+    font-weight: 400;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  

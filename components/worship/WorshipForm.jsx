@@ -23,13 +23,15 @@ const WorshipPage = () => {
         {/* Slanted Image Gallery */}
         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
           {['other.jpg', 'worship1.png', 'worship2.png', 'worship3.png'].map((src, index) => (
-            <div key={index} className="col-span-1 relative h-60 lg:h-96">
+            <div key={index} className="col-span-1 relative h-40 lg:h-64" style={{
+              transform: `translateY(${index % 2 === 0 ? '5px' : '-5px'})`
+            }}>
               {/* Using Next.js Image component for optimized images */}
               <Image
                 src={`/${src}`} // Ensure the path is correct
                 alt={`Gallery Image ${index + 1}`}
-                layout="fill"
-                objectFit="cover"
+                fill
+                objectFit="cover" // This will maintain the aspect ratio and cover the area
                 className="rounded-lg"
               />
             </div>
@@ -96,4 +98,5 @@ const WorshipPage = () => {
 };
 
 export default WorshipPage;
+
 

@@ -24,7 +24,7 @@ const ActionSection = () => {
     <div className="bg-white py-12 border">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">
             Want to be a part of this movement?
           </h2>
         </div>
@@ -39,8 +39,8 @@ const ActionSection = () => {
                 className="rounded-lg"
                 sizes="(max-width: 768px) 100vw, 33vw" // Sizes for responsive images
               />
-              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 rounded-lg">
-                <h3 className="text-white text-2xl lg:text-3xl font-bold text-center">{action.label}</h3>
+              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-30 rounded-lg">
+                <h3 className="text-white text-3xl lg:text-5xl font-bold text-center">{action.label}</h3>
               </div>
             </div>
           ))}
