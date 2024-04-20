@@ -8,19 +8,25 @@ const HeroSection = () => {
   const slides = [
     {
       title: "RAISING A SUPERNATURAL ARMY",
-      image: "/hero1.jpg",
+      image: "/1.png",
       ctaLink: "#join",
       ctaText: "Join the movement",
     },
     {
       title: "RAISING A SUPERNATURAL ARMY",
-      image: "/hero2.jpg",
+      image: "/2.png",
       ctaLink: "#join",
       ctaText: "Join the movement",
     },
     {
       title: "RAISING A SUPERNATURAL ARMY",
-      image: "/hero3.jpg",
+      image: "/3.png",
+      ctaLink: "#join",
+      ctaText: "Join the movement",
+    },
+    {
+      title: "RAISING A SUPERNATURAL ARMY",
+      image: "/4.png",
       ctaLink: "#join",
       ctaText: "Join the movement",
     },
@@ -70,7 +76,7 @@ const HeroSection = () => {
               />
               <motion.a
                 href={slide.ctaLink}
-                className="mt-8 bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 transition duration-300 ease-in-out text-xl"
+                className="mt-8 bg-[#c27803] hover:bg-blue-800 text-white font-bold py-3 px-6 transition duration-300 ease-in-out text-xl"
                 style={{ border: 'none' }} // Square button without rounded corners
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
