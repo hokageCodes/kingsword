@@ -7,28 +7,28 @@ const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [
     {
-      title: "Welcome to KingsWord, Calgary",
+      title: "Welcome to KingsWord, Canada",
       subtitle: "Home of the Supernatural",
       image: "/1.png",
       ctaLink: "#join",
       ctaText: "Worship with us",
     },
     {
-      title: "Welcome to KingsWord, Calgary",
+      title: "Welcome to KingsWord, Canada",
       subtitle: "Home of the Supernatural",
       image: "/2.png",
       ctaLink: "#join",
       ctaText: "Worship with us",
     },
     {
-      title: "Welcome to KingsWord, Calgary",
+      title: "Welcome to KingsWord, Canada",
       subtitle: "Home of the Supernatural",
       image: "/3.png",
       ctaLink: "#join",
       ctaText: "Worship with us",
     },
     {
-      title: "Welcome to KingsWord, Calgary",
+      title: "Welcome to KingsWord, Canada",
       subtitle: "Home of the Supernatural",
       image: "/4.png",
       ctaLink: "#join",
