@@ -1,22 +1,22 @@
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch, FaYoutube } from "react-icons/fa";
 
 const sections = [
   {
     title: "About Us",
-    items: ["Beliefs", "Installations", "Leadership"],
+    items: ["Our History", "Leadership", "Beliefs"],
   },
   {
-    title: "Ministries",
-    items: ["Family Life", "Room 707"],
+    title: "Locations",
+    items: ["Calgary", "Toronto", "Vancuover"],
   },
-  {
-    title: "Media",
-    items: ["The New Music", "Ina"],
-  },
+  // {
+  //   title: "Media",
+  //   items: ["The New Music", "Ina"],
+  // },
   {
     title: "Connect With Us",
-    items: ["Instagram", "X", "Youtube", "Policies", "Conditions"],
+    items: ["Instagram", "Youtube", "Facebook", "X",],
   },
 ];
 
@@ -24,8 +24,7 @@ const items = [
   { name: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/" },
   { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/" },
   { name: "Twitter", icon: FaTwitter, link: "https://twitter.com/" },
-  { name: "Twitch", icon: FaTwitch, link: "https://www.twitch.tv/" },
-  { name: "Github", icon: FaGithub, link: "https://github.com/" },
+  { name: "Youtube", icon: FaYoutube, link: "https://www.twitch.tv/" },
 ];
 
 const Footer = () => {

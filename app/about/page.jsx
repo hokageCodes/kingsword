@@ -32,20 +32,21 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex border-b">
+    <div className="container mx-auto">
+      {/* Banner with larger text */}
+      <div className="h-24 flex justify-around items-center bg-yellow-300 py-4 shadow-md">
         {tabData.map((tab, index) => (
-          <button
+          <div
             key={index}
             onClick={() => setActiveTab(tab.label)}
-            className={`py-2 px-4 text-lg ${
+            className={`text-2xl md:text-3xl ${
               activeTab === tab.label
-                ? 'border-b-2 border-blue-500 text-blue-500 font-semibold'
-                : 'text-gray-600 hover:text-blue-500'
-            } focus:outline-none`}
+                ? 'text-black-500 font-semibold'
+                : 'text-gray-600 hover:text-black-900'
+            } focus:outline-none cursor-pointer`}
           >
             {tab.label}
-          </button>
+          </div>
         ))}
       </div>
       <motion.div

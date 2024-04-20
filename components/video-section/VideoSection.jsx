@@ -3,27 +3,28 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPlayCircle } from 'react-icons/fa';
 import Image from 'next/image';
+import 'swiper/css';
+
 
 const VideoSection = () => {
   const videoData = [
     {
-      id: 'BGp3oTBJVFo', // Use the actual YouTube video ID here
-      title: "The New Story", // Title of the video
+      id: 'BGp3oTBJVFo',
+      title: "The New Story",
     },
     {
-      id: 'ElasRjYH00c', // Replace with other video IDs
-      title: "The New Story II",
-    },
-    {   
-      id: 'fkzCLS-FXc0', // Replace with other video IDs
+      id: 'ElasRjYH00c',
       title: "The New Story II",
     },
     {
-      id: '8Odgf0HKKkQ', // Replace with other video IDs
-      title: "The New Story II",
+      id: 'fkzCLS-FXc0',
+      title: "The New Story III",
     },
-  
-    // Add as many objects as you have videos
+    {
+      id: '8Odgf0HKKkQ',
+      title: "The New Story IV",
+    },
+    // ... Add more videos as needed
   ];
   const [currentVideoId, setCurrentVideoId] = useState(videoData[0].id);
 
@@ -41,13 +42,12 @@ const VideoSection = () => {
 
   return (
     <div className="container mx-auto my-8 p-4 bg-white shadow-lg rounded-lg">
-      {/* <h2 className="text-2xl font-bold mb-4">The New Story</h2> */}
       <div className="flex flex-col lg:flex-row">
         {/* Main Video Display */}
         <div className="flex-1">
           <iframe
             className="w-full aspect-video"
-            src={`https://www.youtube.com/embed/${currentVideoId}`}
+            src={`https://www.youtube.com/embed/${currentVideoId}?autoplay=1`}
             title="YouTube video player"
             frameBorder="0"
             allowFullScreen
@@ -57,7 +57,7 @@ const VideoSection = () => {
 
         {/* Video Thumbnails */}
         <div className="flex-1 mt-4 lg:mt-0 lg:ml-4">
-          {videoData.map((video) => (
+          {videoData.map((video, index) => (
             <motion.div
               key={video.id}
               className={`flex items-center mb-4 cursor-pointer ${currentVideoId === video.id ? 'bg-gray-800 text-white' : 'bg-gray-200 hover:bg-gray-300'} rounded-lg`}
@@ -67,11 +67,15 @@ const VideoSection = () => {
               animate="visible"
               transition={{ duration: 0.5 }}
             >
-              <img
-                className="w-20 h-20 flex-none bg-cover rounded-lg mr-4"
-                src={`https://img.youtube.com/vi/${video.id}/oth.jpg`}
-                alt={video.title}
-              />
+              <div className="w-20 h-20 flex-none bg-cover rounded-lg mr-4 relative">
+                <Image
+                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                  alt={video.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
+              </div>
               <div className="flex-grow">
                 <p className="text-lg font-semibold">{video.title}</p>
               </div>
@@ -93,4 +97,3 @@ const VideoSection = () => {
 };
 
 export default VideoSection;
-  

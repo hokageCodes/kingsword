@@ -25,7 +25,7 @@ const EventsSection = () => {
             Catch up our past monthly and annual events
           </h2>
           <button className="bg-black text-white py-2 px-6 sm:px-8 text-sm sm:text-base rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-            View all events
+            <a href="https://youtube.com/kingswordcalgary8172?si=AqiMNKeBUnIy-DtJ">View all events</a>
           </button>
         </div>
         <Swiper
