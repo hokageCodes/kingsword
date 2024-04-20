@@ -17,7 +17,7 @@ const tabData = [
     content: <OurLeadershipContent />,
   },
   {
-    label: 'Installations',
+    label: 'Locations',
     content: <InstallationsContent />,
   },
 ];
