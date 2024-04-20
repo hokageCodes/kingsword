@@ -7,28 +7,32 @@ const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [
     {
-      title: "RAISING A SUPERNATURAL ARMY",
+      title: "Welcome to KingsWord, Calgary",
+      subtitle: "Home of the Supernatural",
       image: "/1.png",
       ctaLink: "#join",
-      ctaText: "Join the movement",
+      ctaText: "Worship with us",
     },
     {
-      title: "RAISING A SUPERNATURAL ARMY",
+      title: "Welcome to KingsWord, Calgary",
+      subtitle: "Home of the Supernatural",
       image: "/2.png",
       ctaLink: "#join",
-      ctaText: "Join the movement",
+      ctaText: "Worship with us",
     },
     {
-      title: "RAISING A SUPERNATURAL ARMY",
+      title: "Welcome to KingsWord, Calgary",
+      subtitle: "Home of the Supernatural",
       image: "/3.png",
       ctaLink: "#join",
-      ctaText: "Join the movement",
+      ctaText: "Worship with us",
     },
     {
-      title: "RAISING A SUPERNATURAL ARMY",
+      title: "Welcome to KingsWord, Calgary",
+      subtitle: "Home of the Supernatural",
       image: "/4.png",
       ctaLink: "#join",
-      ctaText: "Join the movement",
+      ctaText: "Worship with us",
     },
     // ... other slides
   ];
@@ -62,22 +66,29 @@ const HeroSection = () => {
           >
             <img
               src={slide.image}
-              className="w-full h-full object-cover" // Changed to object-cover to maintain aspect ratio
+              className="w-full h-full object-cover"
               alt="Hero slide"
-              style={{ objectPosition: 'center' }} // Ensure the image is centered
+              style={{ objectPosition: 'center' }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
               <motion.h2
                 dangerouslySetInnerHTML={{ __html: slide.title }}
-                className="text-5xl text-white md:text-7xl font-bold leading-tight"
+                className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight text-white"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               />
+              <motion.h3
+                dangerouslySetInnerHTML={{ __html: slide.subtitle }}
+                className="text-xl sm:text-2xl md:text-3xl font-bold mt-4 text-white"
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+              />
               <motion.a
                 href={slide.ctaLink}
-                className="mt-8 bg-[#c27803] hover:bg-blue-800 text-white font-bold py-3 px-6 transition duration-300 ease-in-out text-xl"
+                className="mt-8 bg-[#c27803] hover:bg-blue-800 text-white font-bold py-3 px-6 text-lg sm:text-xl transition duration-300 ease-in-out"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
