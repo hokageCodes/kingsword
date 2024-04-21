@@ -45,7 +45,7 @@ const NavBar = () => {
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/about">About</a></li>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/connect">Connect</a></li>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/give">Give</a></li>
-        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="https://wearethenew.org/listen">Listen</a></li>
+        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/listen">Listen</a></li>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer relative flex items-center' onClick={toggleLocationsDropdown}>
           Locations <AiOutlineDown className="ml-1" />
           {showLocationsDropdown && (

@@ -2,14 +2,6 @@
 import React, { useState } from 'react';
 
 const ComingSoon = () => {
-  const [email, setEmail] = useState('');
-
-  const handleNotify = () => {
-    // Process the notification subscription with the provided email
-    console.log('Notify:', email);
-    // Show a confirmation message or handle the subscription logic
-  };
-
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200 text-center px-4 py-8">
       <h1 className="text-5xl font-bold text-gray-800 mb-4">Coming Soon</h1>
@@ -18,7 +10,6 @@ const ComingSoon = () => {
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <button
-          onClick={handleNotify}
           className="px-6 py-4 bg-[#c27803] text-white rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
         >
           <a href="/">Go back Home</a>
