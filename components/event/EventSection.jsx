@@ -22,7 +22,7 @@ const EventsSection = () => {
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-700 mb-4 sm:mb-0 text-center sm:text-left">
-            Catch up our past monthly and annual events
+            Catch up on our past monthly and annual events
           </h2>
           <button className="bg-black text-white py-2 px-6 sm:px-8 text-sm sm:text-base rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
             <a href="https://youtube.com/kingswordcalgary8172?si=AqiMNKeBUnIy-DtJ">View all events</a>

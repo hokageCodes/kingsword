@@ -35,7 +35,10 @@ const NavBar = () => {
   return (
     <div className='bg-black text-white flex justify-between items-center h-24 z-50 relative'>
       <div className='flex-shrink-0 w-48 ml-4 md:w-64 md:ml-0'>
-        <Image src={RealLogo} alt='Real Logo' width={208} height={80} layout='responsive' />
+        <a href="/">
+          <Image src={RealLogo} alt='Real Logo' width={208} height={80} layout='responsive' />
+        </a>
+          
       </div>
       <ul className='hidden md:flex relative' ref={dropdownRef}>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/">Home</a></li>
