@@ -41,6 +41,8 @@ const NavBar = () => {
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/">Home</a></li>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/about">About</a></li>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/connect">Connect</a></li>
+        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/give">Give</a></li>
+        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="https://wearethenew.org/listen">Listen</a></li>
         <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer relative flex items-center' onClick={toggleLocationsDropdown}>
           Locations <AiOutlineDown className="ml-1" />
           {showLocationsDropdown && (
@@ -53,8 +55,6 @@ const NavBar = () => {
             </div>
           )}
         </li>
-        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="/grow">Give</a></li>
-        <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'><a href="https://youtube.com/kingswordcalgary8172?si=AqiMNKeBUnIy-DtJ">Listen</a></li>
       </ul>
       <div onClick={handleNav} className='md:hidden z-30 text-3xl'>
         { !nav ? <AiOutlineMenu /> : <AiOutlineClose /> }
@@ -70,9 +70,9 @@ const NavBar = () => {
           <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'>Home</li>
           <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'>About</li>
           <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'>Connect</li>
-          <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer' onClick={toggleLocationsDropdown}>Locations</li>
           <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'>Give</li>
           <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer'>Listen</li>
+          <li className='p-4 font-bold hover:text-[#c27803] text-xl transition duration-500 ease-out hover:ease-in cursor-pointer' onClick={toggleLocationsDropdown}>Locations</li>
         </ul>
       </motion.div>
     </div>

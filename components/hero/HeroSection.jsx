@@ -10,28 +10,28 @@ const HeroSection = () => {
       title: "Welcome to KingsWord Canada",
       subtitle: "Home of the Supernatural",
       image: "/1.png",
-      ctaLink: "#join",
+      ctaLink: "https://www.youtube.com/@kingswordcalgary8172/streams",
       ctaText: "Worship with us",
     },
     {
       title: "Welcome to KingsWord Canada",
       subtitle: "Home of the Supernatural",
       image: "/2.png",
-      ctaLink: "#join",
+      ctaLink: "https://www.youtube.com/@kingswordcalgary8172/streams",
       ctaText: "Worship with us",
     },
     {
       title: "Welcome to KingsWord Canada",
       subtitle: "Home of the Supernatural",
       image: "/3.png",
-      ctaLink: "#join",
+      ctaLink: "https://www.youtube.com/@kingswordcalgary8172/streams",
       ctaText: "Worship with us",
     },
     {
       title: "Welcome to KingsWord Canada",
       subtitle: "Home of the Supernatural",
       image: "/4.png",
-      ctaLink: "#join",
+      ctaLink: "https://www.youtube.com/@kingswordcalgary8172/streams",
       ctaText: "Worship with us",
     },
     // ... other slides
@@ -92,6 +92,7 @@ const HeroSection = () => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
+                target='_blank'
               >
                 {slide.ctaText}
               </motion.a>
